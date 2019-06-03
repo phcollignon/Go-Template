@@ -1,0 +1,9 @@
+{
+    "Db": {
+        "Username": "admin",
+        "Password": "123456",
+        "Host": "oracle",
+        "Port": "1521"
+    },
+    "Env": "prod"
+}

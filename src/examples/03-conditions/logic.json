@@ -1,0 +1,11 @@
+{
+    "Cases" : [
+        {"A":true,"B":true},
+        {"A":false,"B":false},
+        {"A":true,"B":false},
+        {"A":false,"B":true},
+        {"A":0,"B":1},
+        {"A":1,"B":0}
+
+    ]
+}

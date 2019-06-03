@@ -1,0 +1,6 @@
+
+wget http://www.mysite.com?email%3Djohn%40doe.com%3Bmessage%3Dhello+world+%26+co+%21
+
+Is 3 &lt; 5 ?, please enter the reponse here bellow &amp; click enter
+
+It\'s the word \'hello\' that\'s important 

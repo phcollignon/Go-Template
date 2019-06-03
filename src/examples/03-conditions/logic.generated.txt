@@ -1,0 +1,24 @@
+
+    true and true is true
+    true or true is true
+    true and not true is false
+
+    false and false is false
+    false or false is false
+    false and not false is false
+
+    true and false is false
+    true or false is true
+    true and not false is true
+
+    false and true is false
+    false or true is true
+    false and not true is false
+
+    0 and 1 is 0
+    0 or 1 is 1
+    0 and not 1 is 0
+
+    1 and 0 is 0
+    1 or 0 is 1
+    1 and not 0 is true

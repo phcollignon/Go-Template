@@ -1,0 +1,17 @@
+| directory | template               | values       | description                                           |
+| --------- | ---------------------- | ------------ | ----------------------------------------------------- |
+|  01-values | [contact.tpl](./src/examples/01-values/contact.tpl) | [contact.json](./src/examples/01-values/contact.json) | values interpolation   |
+|  01-values | [contact-with.tpl](./src/examples/01-values/contact-with.tpl) | [contact.json](./src/examples/01-values/contact.json) | values interpolation with scoped object "with" action  |
+|  01-values | [contact-key-index.tpl](./src/examples/01-values/contact-key-index.tpl) | [contact.json](./src/examples/01-values/contact.json) | values and keys interpolation with  "index" function  |
+|  01-values | [email.tpl](./src/examples/01-values/email.tpl) | [email.yaml](./src/examples/01-values/email.yaml) | values interpolation with array index  |
+|  01-values | [properties-whitespace.tpl](./src/examples/01-values/properties-whitespace.tpl) | [properties-whitespace.yaml](./src/examples/01-values/properties-whitespace.yaml) | manage whitespace in java property file  |
+|  02-loop | [db-schema.tpl](./src/examples/02-loop/db-schema.tpl) | [db-schema.json](./src/examples/02-loop/db-schema.json) | Iterate on values  |
+|  03-conditions | [logic.tpl](./src/examples/03-conditions/logic.tpl) | [logic.json](./src/examples/03-conditions/logic.json) | Logic functions  |
+|  03-conditions | [numbers.tpl](./src/examples/03-conditions/numbers.tpl) | [numbers.json](./src/examples/03-conditions/numbers.json) | Logic operators  |
+|  04-builtin-functions | [logs.tpl](./src/examples/04-builtin-functions/logs.tpl) | [logs.json](./src/examples/04-builtin-functions/logs.json) | Index and length of a list  |
+|  04-builtin-functions | [print.tpl](./src/examples/04-builtin-functions/print.tpl) | [print.json](./src/examples/04-builtin-functions/print.json) | Formatted print function  |
+|  04-builtin-functions | [escape.tpl](./src/examples/04-builtin-functions/escape.tpl) | [escape.json](./src/examples/04-builtin-functions/escape.json) | URL query string, html and javascript escape  |
+|  06-custom-functions | [javabean.tpl](./src/examples/06-custom-functions/javabean.tpl) | [javabean.json](./src/examples/06-custom-functions/javabean.json) | Use of custom functions (defined in my-funcs.go)  |
+|  07-multiplefiles | [mailing.tpl](./src/examples/07-multiplefiles/mailing.tpl) | [mailing.json](./src/examples/07-multiplefiles/mailing.json) | Generate multiple files with one template an one value file  |
+|  08-subtemplate | [template.tpl](./src/examples/08-subtemplate/template.tpl) | [template.json](./src/examples/08-subtemplate/template.json) | Call a named sub-template  |
+                           

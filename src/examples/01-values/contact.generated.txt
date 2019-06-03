@@ -1,0 +1,37 @@
+
+Contact Card:
+  - Name : Doe, John
+  - Address : 
+        Main Street, 101
+        1000, London
+  - Contact
+        - Phones : 
+            - 487-899-556 (Private)
+            - 587-986-545 (Work)
+            - 478-985-326 (Mobile)
+
+
+
+Contact Card:
+  - Name : Doe, John
+  - Address :
+        Main Street, 101
+        1000, London
+  - Contact
+        - Phones :
+            - 487-899-556 (Private)
+            - 587-986-545 (Work)
+            - 478-985-326 (Mobile)
+
+
+
+Contact Card:
+  - Name : Doe, John
+  - Address :
+        Main Street, 101
+        1000, London
+  - Contact
+        - Phones :
+            - 478-985-326 (Mobile)
+            - 487-899-556 (Private)
+            - 587-986-545 (Work)

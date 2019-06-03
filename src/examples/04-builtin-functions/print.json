@@ -1,0 +1,10 @@
+{
+    "first_name":"John",
+    "last_name":"Doe",
+    "street":"Main St.",
+    "number":"5",
+    "zip":"1000",
+    "city":"London",
+    "discount":25
+
+}
