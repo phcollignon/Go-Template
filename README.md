@@ -509,7 +509,6 @@ Regards,
 
  
 ```
-<<<<<<< HEAD
 
 ## Go templates examples
 Here is the list of Go template examples.  You can use them in your own code or with the generator documented below.
@@ -531,5 +530,3 @@ Here is the list of Go template examples.  You can use them in your own code or 
 |  06-custom-functions | [javabean.tpl](./src/examples/06-custom-functions/javabean.tpl) | [javabean.json](./src/examples/06-custom-functions/javabean.json) | Use of custom functions (defined in my-funcs.go)  |
 |  07-multiplefiles | [mailing.tpl](./src/examples/07-multiplefiles/mailing.tpl) | [mailing.json](./src/examples/07-multiplefiles/mailing.json) | Generate multiple files with one template an one value file  |
 |  08-subtemplate | [template.tpl](./src/examples/08-subtemplate/template.tpl) | [template.json](./src/examples/08-subtemplate/template.json) | Call a named sub-template  |
-=======
->>>>>>> cfbedd8ea44ccac58559c482a52743422cf68342
