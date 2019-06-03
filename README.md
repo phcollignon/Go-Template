@@ -3,6 +3,7 @@ This repository contains a set of Go templates examples and a Go code generator 
 
 ## Go templates examples
 Here is the list of Go template examples.  You can use them in your own code or with the generator documented below.
+
 | directory | template               | values       | description                                           |
 | --------- | ---------------------- | ------------ | ----------------------------------------------------- |
 |  01-values | [contact.tpl](./src/examples/01-values/contact.tpl) | [contact.json](./src/examples/01-values/contact.json) | values interpolation   |
