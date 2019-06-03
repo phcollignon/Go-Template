@@ -1,26 +1,6 @@
 # Introduction
-This repository contains a set of Go templates examples and a Go code generator that you can use to generate any content.
-
-## Go templates examples
-Here is the list of Go template examples.  You can use them in your own code or with the generator documented below.
-| directory | template               | values       | description                                           |
-| --------- | ---------------------- | ------------ | ----------------------------------------------------- |
-|  01-values | [contact.tpl](./src/examples/01-values/contact.tpl) | [contact.json](./src/examples/01-values/contact.json) | values interpolation   |
-|  01-values | [contact-with.tpl](./src/examples/01-values/contact-with.tpl) | [contact.json](./src/examples/01-values/contact.json) | values interpolation with scoped object "with" action  |
-|  01-values | [contact-key-index.tpl](./src/examples/01-values/contact-key-index.tpl) | [contact.json](./src/examples/01-values/contact.json) | values and keys interpolation with  "index" function  |
-|  01-values | [email.tpl](./src/examples/01-values/email.tpl) | [email.yaml](./src/examples/01-values/email.yaml) | values interpolation with array index  |
-|  01-values | [properties-whitespace.tpl](./src/examples/01-values/properties-whitespace.tpl) | [properties-whitespace.yaml](./src/examples/01-values/properties-whitespace.yaml) | manage whitespace in java property file  |
-|  02-loop | [db-schema.tpl](./src/examples/02-loop/db-schema.tpl) | [db-schema.json](./src/examples/02-loop/db-schema.json) | Iterate on values  |
-|  03-conditions | [logic.tpl](./src/examples/03-conditions/logic.tpl) | [logic.json](./src/examples/03-conditions/logic.json) | Logic functions  |
-|  03-conditions | [numbers.tpl](./src/examples/03-conditions/numbers.tpl) | [numbers.json](./src/examples/03-conditions/numbers.json) | Logic operators  |
-|  04-builtin-functions | [logs.tpl](./src/examples/04-builtin-functions/logs.tpl) | [logs.json](./src/examples/04-builtin-functions/logs.json) | Index and length of a list  |
-|  04-builtin-functions | [print.tpl](./src/examples/04-builtin-functions/print.tpl) | [print.json](./src/examples/04-builtin-functions/print.json) | Formatted print function  |
-|  04-builtin-functions | [escape.tpl](./src/examples/04-builtin-functions/escape.tpl) | [escape.json](./src/examples/04-builtin-functions/escape.json) | URL query string, html and javascript escape  |
-|  05-sprig-functions | N/A | N/A | [http://masterminds.github.io/sprig/](http://masterminds.github.io/sprig/) |
-|  06-custom-functions | [javabean.tpl](./src/examples/06-custom-functions/javabean.tpl) | [javabean.json](./src/examples/06-custom-functions/javabean.json) | Use of custom functions (defined in my-funcs.go)  |
-|  07-multiplefiles | [mailing.tpl](./src/examples/07-multiplefiles/mailing.tpl) | [mailing.json](./src/examples/07-multiplefiles/mailing.json) | Generate multiple files with one template an one value file  |
-|  08-subtemplate | [template.tpl](./src/examples/08-subtemplate/template.tpl) | [template.json](./src/examples/08-subtemplate/template.json) | Call a named sub-template  |
-                                                      
+This repository contains a Go code generator based on Go Template and a set of Go Template examples.
+                                                  
 
 ## Go code generator
 Go templates are one of the best choice to build a fast and small code generation tool. 
@@ -40,10 +20,10 @@ Download zip archive from github or clone this repository
 You can use it as a command line or as a go library to dynamically generate code in go programs.
 
 ## command line
-Look in `gocodegen/dist` directory for the binary matching your platform and add it to your `PATH` environment variable.
+Look in `Go-Template/dist` directory for the binary matching your platform and add it to your `PATH` environment variable.
 
 ```
-cd gocodegen/src/examples/01-simple
+cd Go-Template/src/examples/01-simple
 gocodegen-linux-amd64 -j email.json -t email.tmpl
 ```
 
@@ -89,7 +69,7 @@ And the following data :
 {
     "Name": "Phil",
     "Date": "01/01/2018",
-    "Project": "gocodegen",
+    "Project": "Go-Template",
     "Topics": [
         "write documentation",
         "publish to github.com",
@@ -111,7 +91,7 @@ Dear Phil,
 
 Hello, 
 
-We would like to assign some tasks for gocodegen project :
+We would like to assign some tasks for Go-Template project :
 
     - write documentation
 
@@ -417,7 +397,7 @@ Each object has a `FileName` used to create the file, and a `Data` object which 
         "Data": {
             "Name": "phil",
             "Date": "01/01/2018",
-            "Project": "gocodegen",
+            "Project": "Go-Template",
             "Topics": [
                 "write documentation",
                 "publish to github.com",
@@ -430,7 +410,7 @@ Each object has a `FileName` used to create the file, and a `Data` object which 
         "Data": {
             "Name": "john",
             "Date": "01/01/2018",
-            "Project": "gocodegen",
+            "Project": "Go-Template",
             "Topics": [
                 "write documentation",
                 "publish to github.com",
@@ -443,7 +423,7 @@ Each object has a `FileName` used to create the file, and a `Data` object which 
         "Data": {
             "Name": "peter",
             "Date": "01/01/2018",
-            "Project": "gocodegen",
+            "Project": "Go-Template",
             "Topics": [
                 "write documentation",
                 "publish to github.com",
@@ -468,7 +448,7 @@ Dear phil,
 
 Hello, 
 
-We would like to assign some tasks for gocodegen project :
+We would like to assign some tasks for Go-Template project :
 
     - write documentation
 
@@ -490,7 +470,7 @@ Dear john,
 
 Hello, 
 
-We would like to assign some tasks for gocodegen project :
+We would like to assign some tasks for Go-Template project :
 
     - write documentation
 
@@ -514,7 +494,7 @@ Dear peter,
 
 Hello, 
 
-We would like to assign some tasks for gocodegen project :
+We would like to assign some tasks for Go-Template project :
 
     - write documentation
 
@@ -529,3 +509,24 @@ Regards,
 
  
 ```
+
+## Go templates examples
+Here is the list of Go template examples.  You can use them in your own code or with the generator documented below.
+
+| directory | template               | values       | description                                           |
+| --------- | ---------------------- | ------------ | ----------------------------------------------------- |
+|  01-values | [contact.tpl](./src/examples/01-values/contact.tpl) | [contact.json](./src/examples/01-values/contact.json) | values interpolation   |
+|  01-values | [contact-with.tpl](./src/examples/01-values/contact-with.tpl) | [contact.json](./src/examples/01-values/contact.json) | values interpolation with scoped object "with" action  |
+|  01-values | [contact-key-index.tpl](./src/examples/01-values/contact-key-index.tpl) | [contact.json](./src/examples/01-values/contact.json) | values and keys interpolation with  "index" function  |
+|  01-values | [email.tpl](./src/examples/01-values/email.tpl) | [email.yaml](./src/examples/01-values/email.yaml) | values interpolation with array index  |
+|  01-values | [properties-whitespace.tpl](./src/examples/01-values/properties-whitespace.tpl) | [properties-whitespace.yaml](./src/examples/01-values/properties-whitespace.yaml) | manage whitespace in java property file  |
+|  02-loop | [db-schema.tpl](./src/examples/02-loop/db-schema.tpl) | [db-schema.json](./src/examples/02-loop/db-schema.json) | Iterate on values  |
+|  03-conditions | [logic.tpl](./src/examples/03-conditions/logic.tpl) | [logic.json](./src/examples/03-conditions/logic.json) | Logic functions  |
+|  03-conditions | [numbers.tpl](./src/examples/03-conditions/numbers.tpl) | [numbers.json](./src/examples/03-conditions/numbers.json) | Logic operators  |
+|  04-builtin-functions | [logs.tpl](./src/examples/04-builtin-functions/logs.tpl) | [logs.json](./src/examples/04-builtin-functions/logs.json) | Index and length of a list  |
+|  04-builtin-functions | [print.tpl](./src/examples/04-builtin-functions/print.tpl) | [print.json](./src/examples/04-builtin-functions/print.json) | Formatted print function  |
+|  04-builtin-functions | [escape.tpl](./src/examples/04-builtin-functions/escape.tpl) | [escape.json](./src/examples/04-builtin-functions/escape.json) | URL query string, html and javascript escape  |
+|  05-sprig-functions | N/A | N/A | [http://masterminds.github.io/sprig/](http://masterminds.github.io/sprig/) |
+|  06-custom-functions | [javabean.tpl](./src/examples/06-custom-functions/javabean.tpl) | [javabean.json](./src/examples/06-custom-functions/javabean.json) | Use of custom functions (defined in my-funcs.go)  |
+|  07-multiplefiles | [mailing.tpl](./src/examples/07-multiplefiles/mailing.tpl) | [mailing.json](./src/examples/07-multiplefiles/mailing.json) | Generate multiple files with one template an one value file  |
+|  08-subtemplate | [template.tpl](./src/examples/08-subtemplate/template.tpl) | [template.json](./src/examples/08-subtemplate/template.json) | Call a named sub-template  |

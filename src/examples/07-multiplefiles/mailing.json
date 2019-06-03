@@ -4,7 +4,7 @@
         "Data": {
             "Name": "phil",
             "Date": "01/01/2018",
-            "Project": "gocodegen",
+            "Project": "Go-Template",
             "Topics": [
                 "write documentation",
                 "publish to github.com",
@@ -17,7 +17,7 @@
         "Data": {
             "Name": "john",
             "Date": "01/01/2018",
-            "Project": "gocodegen",
+            "Project": "Go-Template",
             "Topics": [
                 "write documentation",
                 "publish to github.com",
@@ -30,7 +30,7 @@
         "Data": {
             "Name": "peter",
             "Date": "01/01/2018",
-            "Project": "gocodegen",
+            "Project": "Go-Template",
             "Topics": [
                 "write documentation",
                 "publish to github.com",
