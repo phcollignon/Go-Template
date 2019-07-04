@@ -24,7 +24,7 @@ Look in `Go-Template/dist` directory for the binary matching your platform and a
 
 ```
 cd Go-Template/src/examples/01-simple
-gocodegen-linux-amd64 -j email.json -t email.tmpl
+gocodegen-linux-amd64 -d email.json -t email.tmpl
 ```
 
 ## output directory 
@@ -33,12 +33,12 @@ By default, generated files are created in the same folder as the json file.
 
 You can change the ouput directory with `-o outputdirectory`
 
-`gocodegen-linux-amd64 -j email.json -t email.tmpl -o /tmp/gocodegentest`
+`gocodegen-linux-amd64 -d email.json -t email.tmpl -o /tmp/gocodegentest`
 
 ## multiple file generation
 If your Json Data file is designed to generate multiple files (see Example 5 below), use the following command :
 
-`gocodegen-linux-amd64 -j mailing.json -t mailing.tmpl -m multi`
+`gocodegen-linux-amd64 -d mailing.json -t mailing.tmpl -m multi`
 
 # Examples
 
@@ -81,7 +81,7 @@ And the following data :
 
 The following command,
 
-`gocodegen-linux-amd64 -j 01-simple/email.json -t 01-simple/email.tmpl`
+`gocodegen-linux-amd64 -d 01-simple/email.json -t 01-simple/email.tmpl`
 
 generates `email.generated.txt` file
 
@@ -177,7 +177,7 @@ The following command,
 
 ```
 
-`gocodegen-linux-amd64 -j schema.json -t createtable.tmpl`
+`gocodegen-linux-amd64 -d schema.json -t createtable.tmpl`
 
 generates the following file
 
@@ -232,7 +232,7 @@ And the following numbers to be compared :
 
 ```
 
-`gocodegen-linux-amd64 -j numbers.json -t numbers.tmpl`
+`gocodegen-linux-amd64 -d numbers.json -t numbers.tmpl`
 
 generates the following file
 
@@ -292,7 +292,7 @@ public class User implements java.io.Serializable {
 ```
 
 Either compile the gocodgen for your platform or install Go and run 
-`go run main.go my-funcs.go -j numbers.json -t numbers.tmpl`
+`go run main.go my-funcs.go -d numbers.json -t numbers.tmpl`
 
 For the following json data, 
 
@@ -437,7 +437,7 @@ Each object has a `FileName` used to create the file, and a `Data` object which 
 
 The following command (do not forget `-m multi` flag) :
 
-`gocodegen-linux-amd64 -j mailing.json -t mailing.tmpl -m multi`
+`gocodegen-linux-amd64 -d mailing.json -t mailing.tmpl -m multi`
 
 generates 3 different files :
 
