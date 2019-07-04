@@ -263,7 +263,7 @@ func ToGetterName(name string) string {
 	return "get" + strings.Title(name)
 }
 func ToSetterName(name string) string {
-	return "Set" + strings.Title(name)
+	return "set" + strings.Title(name)
 }
 
 ```
@@ -347,15 +347,15 @@ public class User implements java.io.Serializable {
     
 
     
-        public void SetFirstName(String firstName){
+        public void setFirstName(String firstName){
             this.firstName = firstName;
         }
     
-        public void SetLastName(String lastName){
+        public void setLastName(String lastName){
             this.lastName = lastName;
         }
     
-        public void SetAge(Integer age){
+        public void setAge(Integer age){
             this.age = age;
         }
     
