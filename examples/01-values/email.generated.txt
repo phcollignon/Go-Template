@@ -1,0 +1,18 @@
+
+Dear phil,
+
+Hello, 
+
+We would like to assign some tasks for Go-Template project :
+
+    - write documentation
+
+    - publish to github.com
+
+    - add more examples
+
+Important topic is : publish to github.com
+
+Can we plan a meeting on 01/01/2018 ?
+
+Regards,

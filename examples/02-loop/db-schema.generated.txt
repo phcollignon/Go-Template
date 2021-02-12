@@ -1,0 +1,24 @@
+
+
+	CREATE TABLE EMPLOYEE (
+		
+			ID INTEGER 
+		
+			 , FIRSTNAME VARCHAR  256 
+		
+			 , LASTNAME VARCHAR  256 
+		
+			 , AGE INTEGER 
+		
+		)
+
+	CREATE TABLE PRODUCT (
+		
+			ID INTEGER 
+		
+			 , NAME VARCHAR  256 
+		
+			 , PRICE REAL 
+		
+		)
+

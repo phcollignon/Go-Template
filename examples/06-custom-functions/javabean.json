@@ -1,0 +1,19 @@
+{
+    "User": {
+        "Name" : "Person",
+        "Property": [
+            {
+               "Name": "firstName",
+               "Type": "String"
+            },
+            {
+                "Name": "lastName",
+                "Type": "String"
+            },
+            {
+                "Name": "age",
+                "Type": "Integer"
+            }
+        ]
+    }
+}

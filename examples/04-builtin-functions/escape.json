@@ -1,0 +1,5 @@
+{
+    "urlqs":"email=john@doe.com;message=hello world & co !",
+    "input":"Is 3 < 5 ?, please enter the reponse here bellow & click enter",
+    "myvar":"It's the word 'hello' that's important "
+}

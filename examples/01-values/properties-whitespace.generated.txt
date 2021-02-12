@@ -1,0 +1,22 @@
+# db.properties java file
+# without whitespace control
+
+    db.username=admin
+    
+        # db.password= # loaded from os env
+    
+    db.host=oracle
+    db.port=1521
+
+
+
+# db.properties java file
+# without whitespace control
+    
+    db.username=admin
+# db.password= # loaded from os env
+db.host=oracle
+db.port=1521
+
+
+

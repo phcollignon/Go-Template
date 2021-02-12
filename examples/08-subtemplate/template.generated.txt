@@ -1,0 +1,11 @@
+
+ - labels:
+    app: nginx
+    street: <no value> <no value>
+ - labels:
+    app: nginx
+    name: .Name
+    street: <no value> <no value>
+ - labels:
+    app: nginx
+    street: Main st 8 NY

@@ -1,0 +1,47 @@
+{
+  "Schema": {
+    "Table": [
+      {
+        "Name": "EMPLOYEE",
+        "Column": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "FIRSTNAME",
+            "Type": "VARCHAR",
+            "Size": "256"
+          },
+          {
+            "Name": "LASTNAME",
+            "Type": "VARCHAR",
+            "Size": "256"
+          },
+          {
+            "Name": "AGE",
+            "Type": "INTEGER"
+          }
+        ]
+      },
+      {
+        "Name": "PRODUCT",
+        "Column": [
+          {
+            "Name": "ID",
+            "Type": "INTEGER"
+          },
+          {
+            "Name": "NAME",
+            "Type": "VARCHAR",
+            "Size": "256"
+          },
+          {
+            "Name": "PRICE",
+            "Type": "REAL"
+          }
+        ]
+      }
+    ]
+  }
+}

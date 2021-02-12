@@ -1,0 +1,41 @@
+{
+    "Files": [{
+        "FileName": "test1",
+        "Data": {
+            "Name": "phil",
+            "Date": "01/01/2018",
+            "Project": "Go-Template",
+            "Topics": [
+                "write documentation",
+                "publish to github.com",
+                "add more examples"
+            ]
+        }
+    },
+    {
+        "FileName": "test2",
+        "Data": {
+            "Name": "john",
+            "Date": "01/01/2018",
+            "Project": "Go-Template",
+            "Topics": [
+                "write documentation",
+                "publish to github.com",
+                "add more examples"
+            ]
+        }
+    },
+    {
+        "FileName": "test3",
+        "Data": {
+            "Name": "peter",
+            "Date": "01/01/2018",
+            "Project": "Go-Template",
+            "Topics": [
+                "write documentation",
+                "publish to github.com",
+                "add more examples"
+            ]
+        }
+    }]
+}

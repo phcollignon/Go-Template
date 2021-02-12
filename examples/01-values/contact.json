@@ -1,0 +1,20 @@
+{
+    "Name": "Doe",
+    "Firstname": "John",
+    "Age": 35,
+    "Address": {
+        "Street": "Main Street, 101",
+        "Postcode": "1000",
+        "City": "London"
+    },
+    "Phones": {
+        "Private": "487-899-556",
+        "Work": "587-986-545",
+        "Mobile": "478-985-326"
+    },
+    "Email": "john.doe@email.com",
+    "Hobbies": [
+        "reading",
+        "biking"
+    ]
+}
