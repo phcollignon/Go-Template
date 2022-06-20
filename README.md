@@ -27,7 +27,7 @@ cd Go-Template/src
 go build
 ```
 
-Add Go-Template to your binaries (i.e `sudo mv Go-Template /usr/local/bin`)
+Add Go-Template to your binaries or to your PATH (i.e `sudo mv Go-Template /usr/local/bin`)
 
 ## command line
 Go in one of the examples directory and run Go-Template with a data file and a template file as parameters.
