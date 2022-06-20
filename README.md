@@ -19,12 +19,22 @@ Download zip archive from github or clone this repository
 # Usage
 You can use it as a command line or as a go library to dynamically generate code in go programs.
 
-## command line
-Look in `Go-Template/dist` directory for the binary matching your platform and add it to your `PATH` environment variable.
+## build the binary
+Go in `Go-Template/src` directory.
 
 ```
-cd Go-Template/src/examples/01-simple
-gocodegen-linux-amd64 -d email.json -t email.tmpl
+cd Go-Template/src
+go build
+```
+
+Add Go-Template to your binaries (i.e `sudo mv Go-Template /usr/local/bin`)
+
+## command line
+Go in one of the examples directory and run Go-Template with a data file and a template file as parameters.
+
+```
+cd Go-Template/examples/01-values
+Go-Template -d email.json -t  email.tpl
 ```
 
 ## output directory 
@@ -33,12 +43,12 @@ By default, generated files are created in the same folder as the json file.
 
 You can change the ouput directory with `-o outputdirectory`
 
-`gocodegen-linux-amd64 -d email.json -t email.tmpl -o /tmp/gocodegentest`
+`Go-Template -d email.json -t  email.tpl -o /tmp/gocodegentest`
 
 ## multiple file generation
 If your Json Data file is designed to generate multiple files (see Example 5 below), use the following command :
 
-`gocodegen-linux-amd64 -d mailing.json -t mailing.tmpl -m multi`
+`Go-Template -d mailing.json -t mailing.tpl -m multi`
 
 # Examples
 
@@ -81,7 +91,7 @@ And the following data :
 
 The following command,
 
-`gocodegen-linux-amd64 -d 01-simple/email.json -t 01-simple/email.tmpl`
+`Go-Template -d 01-values/email.json -t 01-values/email.tpl`
 
 generates `email.generated.txt` file
 
@@ -177,7 +187,7 @@ The following command,
 
 ```
 
-`gocodegen-linux-amd64 -d schema.json -t createtable.tmpl`
+`Go-Template -d schema.json -t createtable.tpl`
 
 generates the following file
 
@@ -232,7 +242,7 @@ And the following numbers to be compared :
 
 ```
 
-`gocodegen-linux-amd64 -d numbers.json -t numbers.tmpl`
+`Go-Template -d numbers.json -t numbers.tpl`
 
 generates the following file
 
@@ -292,7 +302,7 @@ public class User implements java.io.Serializable {
 ```
 
 Either compile the gocodgen for your platform or install Go and run 
-`go run main.go my-funcs.go -d numbers.json -t numbers.tmpl`
+`go run main.go my-funcs.go -d numbers.json -t numbers.tpl`
 
 For the following json data, 
 
@@ -437,7 +447,7 @@ Each object has a `FileName` used to create the file, and a `Data` object which 
 
 The following command (do not forget `-m multi` flag) :
 
-`gocodegen-linux-amd64 -d mailing.json -t mailing.tmpl -m multi`
+`Go-Template -d mailing.json -t mailing.tpl -m multi`
 
 generates 3 different files :
 
@@ -515,18 +525,18 @@ Here is the list of Go template examples.  You can use them in your own code or 
 
 | directory | template               | values       | description                                           |
 | --------- | ---------------------- | ------------ | ----------------------------------------------------- |
-|  01-values | [contact.tpl](./src/examples/01-values/contact.tpl) | [contact.json](./src/examples/01-values/contact.json) | values interpolation   |
-|  01-values | [contact-with.tpl](./src/examples/01-values/contact-with.tpl) | [contact.json](./src/examples/01-values/contact.json) | values interpolation with scoped object "with" action  |
-|  01-values | [contact-key-index.tpl](./src/examples/01-values/contact-key-index.tpl) | [contact.json](./src/examples/01-values/contact.json) | values and keys interpolation with  "index" function  |
-|  01-values | [email.tpl](./src/examples/01-values/email.tpl) | [email.yaml](./src/examples/01-values/email.yaml) | values interpolation with array index  |
-|  01-values | [properties-whitespace.tpl](./src/examples/01-values/properties-whitespace.tpl) | [properties-whitespace.yaml](./src/examples/01-values/properties-whitespace.yaml) | manage whitespace in java property file  |
-|  02-loop | [db-schema.tpl](./src/examples/02-loop/db-schema.tpl) | [db-schema.json](./src/examples/02-loop/db-schema.json) | Iterate on values  |
-|  03-conditions | [logic.tpl](./src/examples/03-conditions/logic.tpl) | [logic.json](./src/examples/03-conditions/logic.json) | Logic functions  |
-|  03-conditions | [numbers.tpl](./src/examples/03-conditions/numbers.tpl) | [numbers.json](./src/examples/03-conditions/numbers.json) | Logic operators  |
-|  04-builtin-functions | [logs.tpl](./src/examples/04-builtin-functions/logs.tpl) | [logs.json](./src/examples/04-builtin-functions/logs.json) | Index and length of a list  |
-|  04-builtin-functions | [print.tpl](./src/examples/04-builtin-functions/print.tpl) | [print.json](./src/examples/04-builtin-functions/print.json) | Formatted print function  |
-|  04-builtin-functions | [escape.tpl](./src/examples/04-builtin-functions/escape.tpl) | [escape.json](./src/examples/04-builtin-functions/escape.json) | URL query string, html and javascript escape  |
+|  01-values | [contact.tpl](./examples/01-values/contact.tpl) | [contact.json](./examples/01-values/contact.json) | values interpolation   |
+|  01-values | [contact-with.tpl](./examples/01-values/contact-with.tpl) | [contact.json](./examples/01-values/contact.json) | values interpolation with scoped object "with" action  |
+|  01-values | [contact-key-index.tpl](./examples/01-values/contact-key-index.tpl) | [contact.json](./examples/01-values/contact.json) | values and keys interpolation with  "index" function  |
+|  01-values | [email.tpl](./examples/01-values/email.tpl) | [email.yaml](./examples/01-values/email.yaml) | values interpolation with array index  |
+|  01-values | [properties-whitespace.tpl](./examples/01-values/properties-whitespace.tpl) | [properties-whitespace.yaml](./examples/01-values/properties-whitespace.yaml) | manage whitespace in java property file  |
+|  02-loop | [db-schema.tpl](./examples/02-loop/db-schema.tpl) | [db-schema.json](./examples/02-loop/db-schema.json) | Iterate on values  |
+|  03-conditions | [logic.tpl](./examples/03-conditions/logic.tpl) | [logic.json](./examples/03-conditions/logic.json) | Logic functions  |
+|  03-conditions | [numbers.tpl](./examples/03-conditions/numbers.tpl) | [numbers.json](./examples/03-conditions/numbers.json) | Logic operators  |
+|  04-builtin-functions | [logs.tpl](./examples/04-builtin-functions/logs.tpl) | [logs.json](./examples/04-builtin-functions/logs.json) | Index and length of a list  |
+|  04-builtin-functions | [print.tpl](./examples/04-builtin-functions/print.tpl) | [print.json](./examples/04-builtin-functions/print.json) | Formatted print function  |
+|  04-builtin-functions | [escape.tpl](./examples/04-builtin-functions/escape.tpl) | [escape.json](./examples/04-builtin-functions/escape.json) | URL query string, html and javascript escape  |
 |  05-sprig-functions | N/A | N/A | [http://masterminds.github.io/sprig/](http://masterminds.github.io/sprig/) |
-|  06-custom-functions | [javabean.tpl](./src/examples/06-custom-functions/javabean.tpl) | [javabean.json](./src/examples/06-custom-functions/javabean.json) | Use of custom functions (defined in my-funcs.go)  |
-|  07-multiplefiles | [mailing.tpl](./src/examples/07-multiplefiles/mailing.tpl) | [mailing.json](./src/examples/07-multiplefiles/mailing.json) | Generate multiple files with one template an one value file  |
-|  08-subtemplate | [template.tpl](./src/examples/08-subtemplate/template.tpl) | [template.json](./src/examples/08-subtemplate/template.json) | Call a named sub-template  |
+|  06-custom-functions | [javabean.tpl](./examples/06-custom-functions/javabean.tpl) | [javabean.json](./examples/06-custom-functions/javabean.json) | Use of custom functions (defined in my-funcs.go)  |
+|  07-multiplefiles | [mailing.tpl](./examples/07-multiplefiles/mailing.tpl) | [mailing.json](./examples/07-multiplefiles/mailing.json) | Generate multiple files with one template an one value file  |
+|  08-subtemplate | [template.tpl](./examples/08-subtemplate/template.tpl) | [template.json](./examples/08-subtemplate/template.json) | Call a named sub-template  |
