@@ -1,8 +1,8 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
-	"github.com/ghodss/yaml"
 	"flag"
 	"fmt"
 	"io/ioutil"
@@ -10,10 +10,11 @@ import (
 	"path"
 	"path/filepath"
 	"strings"
-	"github.com/Masterminds/sprig"
 	"text/template"
-	"bytes"
 	"unicode"
+
+	"github.com/Masterminds/sprig"
+	"github.com/ghodss/yaml"
 )
 
 type MultipleFileData struct {
@@ -60,7 +61,7 @@ func main() {
 	if err != nil {
 		fmt.Println(err)
 	}
-	byteValue,err = ToJSON(byteValue)
+	byteValue, err = ToJSON(byteValue)
 
 	if hasMultipleFiles {
 		var multidata MultipleFileData
@@ -82,7 +83,7 @@ func main() {
 		if err != nil {
 			fmt.Println(err)
 		}
-		outputFileName := strings.TrimSuffix(*dataFileName, filepath.Ext(*dataFileName)) + ".generated.txt"
+		outputFileName := strings.TrimSuffix(filepath.Base(*dataFileName), filepath.Ext(*dataFileName)) + ".generated.txt"
 		generateFile(template, *outputDirectory, outputFileName, data)
 	}
 }
@@ -91,7 +92,7 @@ func generateFile(template *template.Template, outputDirectory string, outputFil
 	absOutputFileName := path.Join(outputDirectory, outputFileName)
 	os.MkdirAll(path.Dir(absOutputFileName), os.ModePerm)
 	outputFile, err := os.Create(absOutputFileName)
-	fmt.Println("Generating file : " + absOutputFileName )
+	fmt.Println("Generating file : " + absOutputFileName)
 	defer outputFile.Close()
 	if err != nil {
 		fmt.Println(err)
@@ -115,4 +116,3 @@ func hasJSONPrefix(buf []byte) bool {
 	trim := bytes.TrimLeftFunc(buf, unicode.IsSpace)
 	return bytes.HasPrefix(trim, jsonPrefix)
 }
-
